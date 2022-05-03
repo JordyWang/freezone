@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.freezone.mapper.MomentMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.freezone.domain.Moment">
+            <id property="momentId" column="moment_id" jdbcType="BIGINT"/>
+            <result property="senderUserId" column="sender_user_id" jdbcType="BIGINT"/>
+            <result property="momentContextText" column="moment_context_text" jdbcType="VARCHAR"/>
+            <result property="momentContextPicture" column="moment_context_picture" jdbcType="VARCHAR"/>
+            <result property="momentLikeNumber" column="moment_like_number" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        moment_id,sender_user_id,moment_context_text,
+        moment_context_picture,moment_like_number,create_time,
+        update_time,is_delete
+    </sql>
+</mapper>

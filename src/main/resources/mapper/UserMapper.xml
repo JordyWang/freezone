@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.freezone.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.freezone.domain.User">
+            <id property="userId" column="user_id" jdbcType="BIGINT"/>
+            <result property="userAccount" column="user_account" jdbcType="VARCHAR"/>
+            <result property="userPassword" column="user_password" jdbcType="VARCHAR"/>
+            <result property="userNickname" column="user_nickname" jdbcType="VARCHAR"/>
+            <result property="userGender" column="user_gender" jdbcType="TINYINT"/>
+            <result property="userAvatarUrl" column="user_avatar_url" jdbcType="VARCHAR"/>
+            <result property="userMotto" column="user_motto" jdbcType="VARCHAR"/>
+            <result property="userEmail" column="user_email" jdbcType="VARCHAR"/>
+            <result property="userTell" column="user_tell" jdbcType="VARCHAR"/>
+            <result property="userStatus" column="user_status" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        user_id,user_account,user_password,
+        user_nickname,user_gender,user_avatar_url,
+        user_motto,user_email,user_tell,
+        user_status,create_time,update_time,
+        is_delete
+    </sql>
+</mapper>
