@@ -31,4 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
 !/src/main/resources/application.yml
+=======
+>>>>>>> 884597d (Initial commit)
